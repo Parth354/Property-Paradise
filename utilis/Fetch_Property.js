@@ -1,10 +1,11 @@
 const Api_Domain=process.env.NEXT_PUBLIC_API_DOMAIN || null
+export const dynamic = 'force-dynamic'
 export default async function fetchProperties({showFeatured = false} = {}) {
     try {
         if(!Api_Domain) {
             return [];
         }
-        const res = await fetch(`${Api_Domain}/properties${showFeatured ? '/featured'.trim() : ''.trim()}`,{ cache: 'no-store' });
+        const res = await fetch(`${Api_Domain}/properties${showFeatured ? '/featured' : ''}`,{ cache: 'no-store' });
         if (!res.ok) {
             throw new Error('Failed to fetch data');
         }

@@ -3,6 +3,8 @@ import connectDB from "@/config/mongodb";
 import Property from "@/models/property_model";
 import getSessionUser from "@/utilis/GetSessionUser";
 
+export const dynamic = 'force-dynamic'
+
 //GET api/properties
 export const GET = async(request)=>{
     try {
