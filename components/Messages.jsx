@@ -6,6 +6,7 @@ import Spinner from "./Spinner";
 const Messages = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     const getMessages = async () => {
