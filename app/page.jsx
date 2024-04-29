@@ -4,6 +4,8 @@ import Hero from '@/components/Hero'
 import HomeProperties from '@/components/HomeProperties'
 import Info_Boxes from "@/components/Info_Boxes"
 
+export const dynamic = 'force-dynamic'
+
 const HomePage = () => {
 
     return (
