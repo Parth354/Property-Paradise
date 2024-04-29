@@ -2,6 +2,8 @@ import fetchProperties from '@/utilis/Fetch_Property';
 import PropertyCard from './PropertyCard';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic'
+
 const HomeProperties = async () => {
     const data = await fetchProperties();
     const recentProperties = data.properties

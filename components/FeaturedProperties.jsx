@@ -1,6 +1,8 @@
 import fetchProperties from "@/utilis/Fetch_Property"
 import FeaturedPropertyCard from "./FeaturedPropertyCard"
 
+export const dynamic = 'force-dynamic'
+
 const FeaturedProperties = async() => {
 
     const properties = await fetchProperties({
@@ -14,7 +16,7 @@ const FeaturedProperties = async() => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     { properties.map((property)=>(
-                        <FeaturedPropertyCard property={property}/>
+                        <FeaturedPropertyCard key={property._id} property={property}/>
                     ))}
                     
                 </div>
