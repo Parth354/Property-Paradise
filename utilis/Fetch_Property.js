@@ -4,8 +4,7 @@ export default async function fetchProperties({showFeatured = false} = {}) {
         if(!Api_Domain) {
             return [];
         }
-        const res = await fetch(`${Api_Domain}/properties${showFeatured?'/featured':''}`
-        ,{ cache:'no-store'});
+        const res = await fetch(`${Api_Domain}/properties${showFeatured ? '/featured' : ''}`,{ cache: 'no-store' });
         if (!res.ok) {
             throw new Error('Failed to fetch data');
         }
